@@ -9,9 +9,9 @@ import threading
 import json
 from os import environ
 
-bot_token = environ.get("TOKEN", "") 
-api_hash = environ.get("HASH", "") 
-api_id = int(environ.get("ID", ""))
+bot_token = environ.get("TOKEN", "6469613954:AAF65fO8kHH4T-oBhE-sylrkGkOLm3gCXO8") 
+api_hash = environ.get("HASH", "3732e079c4125690226d8e7b4e028ca4") 
+api_id = int(environ.get("ID", "4125690226"))
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 ss = environ.get("STRING", "")
@@ -64,7 +64,7 @@ def progress(current, total, message, type):
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
 	bot.send_message(message.chat.id, f"**__👋 Hi** **{message.from_user.mention}**, **I am Save Restricted Bot, I can send you restricted content by it's post link__**\n\n{USAGE}",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Update Channel", url="https://t.me/VJ_Botz")]]), reply_to_message_id=message.id)
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Update Channel", url="https://t.me/tJ_Bots")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
